@@ -1,11 +1,9 @@
 <script setup lang="ts">
-  import { computed } from 'vue';
+  import { computed, ref } from 'vue';
 
-  const link =  '';
-  const description = '';
-  const isDisabled = computed(() => {
-    return !link || !description;
-  });
+  const link =  ref('');
+  const description = ref('');
+  const isSubmitButtonDisabled = computed(() => (!link.value || !description.value));
 
   const onSubmit = () => {
     alert('Link adicionado com sucesso!');
@@ -23,7 +21,7 @@
     <button
       type="submit"
       class="button is-primary is-medium is-fullwidth"
-      :disabled="isDisabled"
+      :disabled="isSubmitButtonDisabled"
     >Adicionar</button>
   </form>
 </template>
