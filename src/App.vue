@@ -5,6 +5,9 @@
 
 <template>
   <section class="container mt-5">
+    <div class="column">
+      <h1 class="title">My Links</h1>
+    </div>
     <div class="columns">
       <div class="column">
         <LinkList />
