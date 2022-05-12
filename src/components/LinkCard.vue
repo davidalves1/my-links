@@ -2,7 +2,7 @@
   const props = defineProps<{
     url: string;
     description: string;
-    timestamp: Date;
+    timestamp?: Date;
   }>()
 </script>
 
